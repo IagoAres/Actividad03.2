@@ -41,23 +41,27 @@ class NotaController {
     public function save() {
         $this->view = 'edit_note';
         $this->page_title = 'Editar nota';
-        
-        $id=null;
-        $title="";
-        $content="";
-        
+
+        $id = null;
+        $title = "";
+        $content = "";
+        $imagen = "";
+
         if (isset($_POST["id"]) and $_POST["id"] != '') {
             $id = $_POST["id"];
         }
-           /* Received values */
+        /* Received values */
         if (isset($_POST["title"])) {
             $title = $_POST["title"];
         }
         if (isset($_POST["content"])) {
             $content = $_POST["content"];
         }
-        
-        $nota = new Nota($id, $title, $content);   
+        if (isset($_POST["imagen"])) {
+            $imagen = $_POST["imagen"];
+        }
+
+        $nota = new Nota($id, $title, $content, $imagen);
 
         $notaGuardada = $this->notaServicio->save($nota);
         //para saber si ha habido error o no

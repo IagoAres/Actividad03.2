@@ -59,6 +59,7 @@ class NotaRepository implements INotaRepository {
                 $encontrado = true;
                 $this->arrayNotas[$key]->setTitulo($notaToUpdate->getTitulo());
                 $this->arrayNotas[$key]->setContenido($notaToUpdate->getContenido());
+                $this->arrayNotas[$key]->setImaegen($notaToUpdate->getImagen());
             }
         }
 
