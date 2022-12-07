@@ -53,7 +53,5 @@ class NotaServicio {
     public function deleteNoteById($id): bool {
         return $this->repository->deleteNota($id);
     }
-
 }
-
 ?>

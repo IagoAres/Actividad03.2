@@ -1,16 +1,1 @@
-[{
-        "id": 1,
-        "titulo": "Lista de la compra2",
-        "contenido": "Leche, Agua, Pan 2",
-        "imagen": "no_picture.png"
-    }, {
-        "id": 2,
-        "titulo": "TO DO List",
-        "contenido": "Reservar restaurante el 24\/12\/2022, Comprar los regalos",
-        "imagen": "no_picture.png"
-    }, {
-        "id": 3,
-        "titulo": "Reuni\u00f3n de departamento",
-        "contenido": "Solicitar aumento de presupuesto, Felicitar al personal",
-        "imagen": "no_picture.png"
-    }]
+[{"id":1,"titulo":"Lista de la compra2","contenido":"Leche, Agua, Pan 2","imagen":"no_picture.png"},{"id":2,"titulo":"TO DO List","contenido":"Reservar restaurante el 24\/12\/2022, Comprar los regalos","imagen":"no_picture.png"},{"id":3,"titulo":"Reuni\u00f3n de departamento","contenido":"Solicitar aumento de presupuesto, Felicitar al personal","imagen":"no_picture.png"}]

@@ -10,23 +10,22 @@
  *
  * @author mfernandez
  */
-class Nota implements JsonSerializable{
-    
+class Nota implements JsonSerializable {
+
     use ViewData;
-    
+
     private ?int $id;
     private string $titulo;
     private string $contenido;
     private string $imagen;
-    
-    public function __construct(?int $id=null, string $titulo="", string $contenido="", string $imagen="") {
+
+    public function __construct(?int $id = null, string $titulo = "", string $contenido = "", ?string $imagen = "Photo1.png") {
         $this->id = $id;
         $this->titulo = $titulo;
         $this->contenido = $contenido;
-        $this->imagen=$imagen;
+        $this->imagen = $imagen;
     }
 
-    
     public function getId(): ?int {
         return $this->id;
     }
@@ -38,8 +37,8 @@ class Nota implements JsonSerializable{
     public function getContenido(): string {
         return $this->contenido;
     }
-    
-    public function getImagen():string {
+
+    public function getImagen(): string {
         return $this->imagen;
     }
 
@@ -54,13 +53,13 @@ class Nota implements JsonSerializable{
     public function setContenido(string $contenido): void {
         $this->contenido = $contenido;
     }
-    
-    public function setImagen(string $imagen):void {
-        $this->imagen = $imagen;   
+
+    public function setImagen(string $imagen): void {
+        $this->imagen = $imagen;
     }
 
     public function jsonSerialize(): mixed {
-          //Especificamos qué propiedades no públicas queremos que pasen a formar parte del objeto JSON
+        //Especificamos qué propiedades no públicas queremos que pasen a formar parte del objeto JSON
         return array(
             'id' => $this->id,
             'titulo' => $this->titulo,

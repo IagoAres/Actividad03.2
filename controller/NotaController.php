@@ -57,8 +57,8 @@ class NotaController {
         if (isset($_POST["content"])) {
             $content = $_POST["content"];
         }
-        if (isset($_POST["imagen"])) {
-            $imagen = $_POST["imagen"];
+        if (is_uploaded_file($_FILES["image"]["name"])) {
+            $imagen = $_FILES["image"]["name"];
         }
 
         $nota = new Nota($id, $title, $content, $imagen);
@@ -71,8 +71,6 @@ class NotaController {
         } else {
             $notaGuardada->setEstado(Util::OPERATION_OK);
         }
-
-
         return $notaGuardada;
     }
 
@@ -91,7 +89,6 @@ class NotaController {
         $this->view = 'delete_note';
         return $this->notaServicio->deleteNoteById($_POST["id"]);
     }
-
 }
 
 ?>

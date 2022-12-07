@@ -36,7 +36,7 @@ class NotaRepository implements INotaRepository {
     public function saveNotas(array $notas): bool {
 
         $writtenBytes = file_put_contents($this->filePath, json_encode($notas));
-
+        Util::saveImg();
         return ($writtenBytes !== false);
     }
 
@@ -59,7 +59,7 @@ class NotaRepository implements INotaRepository {
                 $encontrado = true;
                 $this->arrayNotas[$key]->setTitulo($notaToUpdate->getTitulo());
                 $this->arrayNotas[$key]->setContenido($notaToUpdate->getContenido());
-                $this->arrayNotas[$key]->setImaegen($notaToUpdate->getImagen());
+                $this->arrayNotas[$key]->setImagen($notaToUpdate->getImagen());
             }
         }
 

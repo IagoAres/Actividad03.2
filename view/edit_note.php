@@ -32,7 +32,7 @@ if ($dataToView["data"]->getImagen() !== null) {
     elseif ($dataToView["data"]->getEstado() === Util::NO_OPERATION):
         ?>
         <form class="form" action="FrontController.php?controller=Nota&action=save" 
-              method="POST">
+              method="POST" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $id; ?>" />
             <div class="form-group">
                 <label>Título</label>
@@ -44,7 +44,7 @@ if ($dataToView["data"]->getImagen() !== null) {
             </div>
             <div class="form-group mb-2">
                 <label>Contenido</label>
-                <input type="file" class="form-control" style="white-space: pre-wrap;" name="image" accept="image/png, image/jpg">
+                <input type="file" class="form-control" style="white-space: pre-wrap;" name="image" accept="image/png, image/jpg, image/gif">
             </div>
             <input type="submit" value="Guardar" class="btn btn-primary"/>
             <a class="btn btn-outline-danger" href="FrontController.php?controller=Nota&action=list">Cancelar</a>

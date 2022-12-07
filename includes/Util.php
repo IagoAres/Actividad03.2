@@ -1,12 +1,5 @@
 <?php
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
-
-
-
 class Util {
 
     CONST OPERATION_OK = 0;
@@ -51,5 +44,11 @@ class Util {
         }
         return $instance;
     }
+    
+    static function saveImg(){
+        $temp_name =$_FILES["image"]["name"];
+        $name = basename($_FILES["image"]["name"]);
+        move_uploaded_file($temp_name, "/../files/".$name);
+    }   
 
 }
